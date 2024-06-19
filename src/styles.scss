@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "../themes/fonts.scss";
+@import "../themes/buttons.scss";
+
+$basefont: 16px;
+
+html,
+app,
+body {
+  font-family: "Aventa-Medium", sans-serif;
+  font-weight: 500;
+  color: #404040;
+  font-size: $basefont;
+  background: #FAFBFC;
+}
+
+.center-absolute {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

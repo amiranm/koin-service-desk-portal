@@ -1,0 +1,9 @@
+input{
+    &:focus{
+        border: none !important;
+        outline: none;
+    }
+    &::placeholder{
+        @apply text-secondary
+    }
+}

@@ -1,0 +1,34 @@
+<div class="h-screen relative">
+    <div class="bg-jira-blue h-2/6 pt-8 pl-8 -z-10">
+        <div class=" text-2xl font-semibold text-white">Koin Service Desk Portal</div>
+    </div>
+
+    <div class="absolute z-20 center-absolute lg:min-w-[481px] md:max-w-[481px]">
+        <div class="bg-white lg:py-14 py-4 lg:px-12 px-4 mb-12 shadow-lg rounded">
+            <button class="back-btn lg:mb-10 md:mb-3">
+                <div class="flex items-center">
+                    <div class=" mr-1"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 8.5H1.5" stroke="#0074E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.5 15.5L1.5 8.5L8.5 1.5" stroke="#0074E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </div>
+                    <div>Back</div>
+                </div>
+            </button>
+            <div class=" text-2xl font-semibold mb-6">Koin Service Desk Portal</div>
+            <div class=" text-lg font-semibold mb-6">Enter your email to log in or sign up</div>
+            <div class=" text-secondary font-bold mb-2">Email address</div>
+            <div class=" grid grid-flow-row content-stretch">
+                <input type="text" id="email" placeholder="emailexample@gmail.com" class=" py-4 px-6 bg-input-field rounded mb-6">
+                <button class="primary-btn mb-6" [routerLink]="['/home']">Continue with Atlassian account</button>
+                <div class="border-b border-[#E1E1E1] h-[1px] mb-6"></div>
+            </div>
+            <div class=" text-title font-extrabold text-sm mb-1">Your Atlassian account</div>
+            <div class=" text-sm">Make things easier by using one account across all of your Atlassian products. <span class=" text-jira-blue"><a href="">Learn more</a></span></div>
+        </div>
+        <div class="flex justify-center">
+            <img src="../../../assets/images/poweredbyjira.png" alt="">
+        </div>
+    </div>
+</div>
+
