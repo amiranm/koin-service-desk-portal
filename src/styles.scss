@@ -10,7 +10,7 @@ $basefont: 16px;
 html,
 app,
 body {
-  font-family: "Aventa-Medium", sans-serif;
+  font-family: "Aventa", sans-serif;
   font-weight: 500;
   color: #404040;
   font-size: $basefont;
@@ -46,5 +46,5 @@ body {
   z-index: 0;
 }
 .card{
-  @apply bg-white pt-14 px-12 pb-20 mb-12 shadow-lg lg:min-w-[481px] md:max-w-[481px]
+  @apply bg-white pt-14 px-12 pb-20 mb-12 shadow-lg lg:min-w-[30.0625rem] md:max-w-[30.0625rem]
 }
