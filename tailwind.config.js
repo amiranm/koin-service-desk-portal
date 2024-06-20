@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        'jira-blue': '#0074E0',
+        'primary': '#0074E0',
         'secondary': '#70767E',
         'input-field': '#FAFBFC',
         'title': '#211F21'

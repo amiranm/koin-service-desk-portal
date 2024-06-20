@@ -16,9 +16,35 @@ body {
   font-size: $basefont;
   background: #FAFBFC;
 }
+.login {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
 
-.center-absolute {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 22rem;
+  background-color: #0074E0; 
+  z-index: 0;
+}
+
+.login::after {
+  content: "";
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FAFBFC;
+  z-index: 0;
+}
+.card{
+  @apply bg-white pt-14 px-12 pb-20 mb-12 shadow-lg lg:min-w-[481px] md:max-w-[481px]
 }
