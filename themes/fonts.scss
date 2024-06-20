@@ -29,3 +29,29 @@
     src: url("../src/assets/fonts/Aventa/Aventa-Black.otf") format("OpenType");
   }
   
+  // Brandon
+@font-face {
+  font-family: "Brandon";
+  font-weight: 500;
+  src: url("../src/assets/fonts/Brandon/Brandon_med.otf") format("OpenType");
+}
+
+@font-face {
+  font-family: "Brandon";
+  font-weight: 900;
+  src: url("../src/assets/fonts/Brandon/Brandon_blk.otf") format("OpenType");
+}
+
+// Syne
+@font-face {
+  font-family: "Syne";
+  font-weight: 600;
+  src: url("../src/assets/fonts/Syne-SemiBold.ttf") format("truetype");
+}
+
+// Text Security Disc
+@font-face {
+  font-family: "Text Security Disc";
+  font-weight: 400;
+  src: url("../src/assets/fonts/text-security-disc.woff") format("woff");
+}
