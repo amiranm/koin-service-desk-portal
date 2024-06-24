@@ -7,7 +7,8 @@ module.exports = {
         'primary': '#0074E0',
         'secondary': '#70767E',
         'input-field': '#FAFBFC',
-        'title': '#211F21'
+        'title': '#211F21',
+        'error': '#c9372c'
       }
     },
   },
