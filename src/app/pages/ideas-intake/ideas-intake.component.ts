@@ -10,6 +10,8 @@ interface RoI {
   styleUrl: './ideas-intake.component.scss'
 })
 export class IdeasIntakeComponent {
+  isModalOpen = false;
+
   htmlContent: string = '';
 
   editorConfig: AngularEditorConfig = {
@@ -54,6 +56,14 @@ export class IdeasIntakeComponent {
       ['insertHorizontalRule', 'removeFormat'],
       ['toggleEditorMode']
     ]
+  }
+
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
   }
 
 }

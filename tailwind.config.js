@@ -8,7 +8,8 @@ module.exports = {
         'secondary': '#70767E',
         'input-field': '#FAFBFC',
         'title': '#211F21',
-        'error': '#c9372c'
+        'error': '#c9372c',
+        'success': '#29A46A'
       }
     },
   },

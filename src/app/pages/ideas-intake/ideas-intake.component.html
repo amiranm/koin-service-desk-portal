@@ -233,7 +233,9 @@
                     </div>
                 </div>
                 <div class="lg:flex">
-                    <button class="bg-primary rounded-sm py-3 font-extrabold mr-4 lg:mb-0 text-white mb-4 min-w-36">Send</button>
+                    <button class="bg-primary rounded-sm py-3 font-extrabold mr-4 lg:mb-0 text-white mb-4 min-w-36" (click)="openModal()">Send</button>
+                    <app-success *ngIf="isModalOpen" (close)="closeModal()"></app-success>
+                    <!-- <app-error *ngIf="isModalOpen" (close)="closeModal()"></app-error> -->
                     <button class=" text-title rounded-sm py-3 font-extrabold bg-[#E1E1E1] min-w-36">Cancel</button>
                 </div>
             </div>

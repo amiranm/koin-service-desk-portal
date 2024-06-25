@@ -6,9 +6,14 @@ import { IdeasIntakeComponent } from './ideas-intake.component';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { HttpClientModule} from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { SuccessComponent } from '../../components/modal/success/success.component';
+import { ErrorComponent } from '../../components/modal/error/error.component';
 
 @NgModule({
-  declarations: [IdeasIntakeComponent],
+  declarations: [IdeasIntakeComponent,
+    SuccessComponent,
+    ErrorComponent
+  ],
   imports: [
     CommonModule,
     IdeasIntakeRoutingModule,
