@@ -94,7 +94,14 @@
                     <div class=" text-title font-semibold mb-3">What are the details of your request <span class=" text-error font-semibold">*</span></div>
                 </div>
                 <div class="flex mb-8">
-                    <angular-editor formControlName="htmlContent" [config]="editorConfig" class="flex-1 bg-input-field"></angular-editor>
+                    <angular-editor formControlName="htmlContent" [config]="editorConfig" class="flex-1 bg-input-field">
+                        <ng-template #customButtons let-executeCommandFn="executeCommandFn">
+                          <ae-toolbar-set>
+                            <ae-button title="Insert HTML" (buttonClick)="executeCommandFn('insertHtml')" iconClass="custom-svg-icon">
+                            </ae-button>
+                          </ae-toolbar-set>
+                        </ng-template>
+                      </angular-editor>
                     <!-- <angular-editor [(ngModel)]="editorContent" [config]="editorConfig"></angular-editor> -->
                     <!-- <quill-editor [(ngModel)]="editorContent"></quill-editor> -->
                 </div>

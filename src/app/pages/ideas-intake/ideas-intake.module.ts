@@ -8,6 +8,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { SuccessComponent } from '../../components/modal/success/success.component';
 import { ErrorComponent } from '../../components/modal/error/error.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [IdeasIntakeComponent,
@@ -20,6 +22,7 @@ import { ErrorComponent } from '../../components/modal/error/error.component';
     NzDropDownModule,
     HttpClientModule, 
     AngularEditorModule,
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class IdeasIntakeModule { }

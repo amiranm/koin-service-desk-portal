@@ -48,13 +48,14 @@ export class IdeasIntakeComponent {
       {class: 'comic-sans-ms', name: 'Comic Sans MS'}
     ],
     toolbarHiddenButtons: [
+      ['undo','redo', 'subscript', 'superscript', 'indent', 'outdent', 'strikeThrough'],
       ['heading', 'fontName'],
       ['underline'],
       ['textColor'],
-      ['justifyLeft', 'justifyCenter', 'justifyRight'],
-      ['unlink', 'image', 'video'],
+      ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+      ['unlink', 'insertImage', 'video', 'insertVideo'],
       ['insertHorizontalRule', 'removeFormat'],
-      ['toggleEditorMode']
+      ['toggleEditorMode', 'backgroundColor']
     ]
   }
 
