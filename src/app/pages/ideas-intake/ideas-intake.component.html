@@ -1,6 +1,6 @@
 <div class="h-screen relative">
     <nav>
-        <div class="bg-white py-6 lg:px-40 md:px-5 flex justify-between items-center">
+        <div class="bg-white py-6 lg:px-40 md:px-5 px-1 flex justify-between items-center">
             <div class=" font-bold text-secondary">Koin Service Desk Portal</div>
             <div class="flex justify-between">
                 <button class=" mr-6"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +97,7 @@
                     <angular-editor formControlName="htmlContent" [config]="editorConfig" class="flex-1 bg-input-field">
                         <ng-template #customButtons let-executeCommandFn="executeCommandFn">
                           <ae-toolbar-set>
-                            <ae-button title="Insert HTML" (buttonClick)="executeCommandFn('insertHtml')" iconClass="custom-svg-icon">
+                            <ae-button title="Mention @" (buttonClick)="executeCommandFn('insertHtml')" iconClass="custom-svg-icon">
                             </ae-button>
                           </ae-toolbar-set>
                         </ng-template>

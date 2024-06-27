@@ -26,36 +26,36 @@ export class IdeasIntakeComponent {
     defaultParagraphSeparator: '',
     defaultFontName: '',
     defaultFontSize: '',
-    customClasses: [
-      {
-        name: 'Normal Text',
-        class: 'normal-text',
-      },
-      {
-        name: 'redText',
-        class: 'redText'
-      },
-      {
-        name: 'titleText',
-        class: 'titleText',
-        tag: 'h1',
-      },
-    ],
-    fonts: [
-      {class: 'Normal Text', name: 'Arial'},
-      {class: 'times-new-roman', name: 'Times New Roman'},
-      {class: 'calibri', name: 'Calibri'},
-      {class: 'comic-sans-ms', name: 'Comic Sans MS'}
-    ],
+    // customClasses: [
+    //   {
+    //     name: 'Normal Text',
+    //     class: 'normal-text',
+    //   },
+    //   {
+    //     name: 'redText',
+    //     class: 'redText'
+    //   },
+    //   {
+    //     name: 'titleText',
+    //     class: 'titleText',
+    //     tag: 'h1',
+    //   },
+    // ],
+    // fonts: [
+    //   {class: 'Normal Text', name: 'Arial'},
+    //   {class: 'times-new-roman', name: 'Times New Roman'},
+    //   {class: 'calibri', name: 'Calibri'},
+    //   {class: 'comic-sans-ms', name: 'Comic Sans MS'}
+    // ],
     toolbarHiddenButtons: [
-      ['undo','redo', 'subscript', 'superscript', 'indent', 'outdent', 'strikeThrough'],
-      ['heading', 'fontName'],
-      ['underline'],
-      ['textColor'],
+      // ['subscript', 'superscript',  'strikeThrough'],
+      ['fontSize', 'indent', 'outdent', 'fontName'],
+      // ['underline'],
+      // ['textColor'],
       ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
-      ['unlink', 'insertImage', 'video', 'insertVideo'],
-      ['insertHorizontalRule', 'removeFormat'],
-      ['toggleEditorMode', 'backgroundColor']
+      // ['unlink', 'insertImage', 'insertVideo'],
+      // ['insertHorizontalRule', 'removeFormat'],
+      ['backgroundColor', 'textColor']
     ]
   }
 

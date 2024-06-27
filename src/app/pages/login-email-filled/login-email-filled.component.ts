@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-login-email-filled',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './login-email-filled.component.scss'
 })
 export class LoginEmailFilledComponent {
+  constructor(private location: Location) {}
 
+  goBack(): void {
+    this.location.back();
+  }
 }
