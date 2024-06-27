@@ -57,9 +57,9 @@
                  <div class=" mb-8">
                     <div class=" text-title font-semibold mb-3">Raise this request on behalf of <span class=" text-error font-semibold">*</span></div>
                     <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
-                        <div class="flex justify-between bg-input-field border border-[#E1E1E1] items-center rounded-md p-6">
+                        <div class="flex justify-between bg-input-field border border-[#E1E1E1] items-center rounded-md lg:p-6 p-2">
                             <div class="flex items-center">
-                                <div class=" mr-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <div class=" lg:mr-4 mr-1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 19.2C9.5 19.2 7.29 17.92 6 16C6.03 14 10 12.9 12 12.9C14 12.9 17.97 14 18 16C16.71 17.92 14.5 19.2 12 19.2ZM12 5C12.7956 5 13.5587 5.31607 14.1213 5.87868C14.6839 6.44129 15 7.20435 15 8C15 8.79565 14.6839 9.55871 14.1213 10.1213C13.5587 10.6839 12.7956 11 12 11C11.2044 11 10.4413 10.6839 9.87868 10.1213C9.31607 9.55871 9 8.79565 9 8C9 7.20435 9.31607 6.44129 9.87868 5.87868C10.4413 5.31607 11.2044 5 12 5ZM12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 6.47 17.5 2 12 2Z" fill="#70767E"/>
                                     </svg>                                    
                                     </div>
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                             <div class="flex">
-                                <button class=" mr-6">
+                                <button class=" lg:mr-6">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="24" height="24" rx="12" fill="#70767E" fill-opacity="0.5"/>
                                         <path d="M12.94 12L15.8066 9.14C15.9322 9.01446 16.0027 8.8442 16.0027 8.66666C16.0027 8.48913 15.9322 8.31887 15.8066 8.19333C15.6811 8.06779 15.5108 7.99727 15.3333 7.99727C15.1558 7.99727 14.9855 8.06779 14.86 8.19333L12 11.06L9.13996 8.19333C9.01442 8.06779 8.84416 7.99727 8.66663 7.99727C8.48909 7.99727 8.31883 8.06779 8.19329 8.19333C8.06776 8.31887 7.99723 8.48913 7.99723 8.66666C7.99723 8.8442 8.06776 9.01446 8.19329 9.14L11.06 12L8.19329 14.86C8.13081 14.922 8.08121 14.9957 8.04737 15.0769C8.01352 15.1582 7.99609 15.2453 7.99609 15.3333C7.99609 15.4213 8.01352 15.5085 8.04737 15.5897C8.08121 15.671 8.13081 15.7447 8.19329 15.8067C8.25527 15.8691 8.329 15.9187 8.41024 15.9526C8.49148 15.9864 8.57862 16.0039 8.66663 16.0039C8.75463 16.0039 8.84177 15.9864 8.92301 15.9526C9.00425 15.9187 9.07798 15.8691 9.13996 15.8067L12 12.94L14.86 15.8067C14.9219 15.8691 14.9957 15.9187 15.0769 15.9526C15.1581 15.9864 15.2453 16.0039 15.3333 16.0039C15.4213 16.0039 15.5084 15.9864 15.5897 15.9526C15.6709 15.9187 15.7446 15.8691 15.8066 15.8067C15.8691 15.7447 15.9187 15.671 15.9526 15.5897C15.9864 15.5085 16.0038 15.4213 16.0038 15.3333C16.0038 15.2453 15.9864 15.1582 15.9526 15.0769C15.9187 14.9957 15.8691 14.922 15.8066 14.86L12.94 12Z" fill="white"/>
@@ -140,7 +140,14 @@
                     <div class="text-secondary mb-3">Justify the need for the new software</div>
                 </div>
                 <div class="flex mb-8">
-                    <angular-editor formControlName="htmlContent" [config]="editorConfig" class="flex-1 bg-input-field"></angular-editor>
+                    <angular-editor formControlName="htmlContent" [config]="editorConfig" class="flex-1 bg-input-field">
+                        <ng-template #customButtons let-executeCommandFn="executeCommandFn">
+                          <ae-toolbar-set>
+                            <ae-button title="Mention @" (buttonClick)="executeCommandFn('insertHtml')" iconClass="custom-svg-icon">
+                            </ae-button>
+                          </ae-toolbar-set>
+                        </ng-template>
+                      </angular-editor>
                 </div>
                 <div class="">
                     <div class=" text-title font-semibold mb-2">Why is this a problem? <span class=" text-error font-semibold">*</span></div>
@@ -153,7 +160,14 @@
                     <div class=" text-title font-semibold mb-3">What is the solution you are proposing? <span class=" text-error font-semibold">*</span></div>
                 </div>
                 <div class="flex mb-8">
-                    <angular-editor formControlName="htmlContent" [config]="editorConfig" class="flex-1 bg-input-field"></angular-editor>
+                    <angular-editor formControlName="htmlContent" [config]="editorConfig" class="flex-1 bg-input-field">
+                        <ng-template #customButtons let-executeCommandFn="executeCommandFn">
+                          <ae-toolbar-set>
+                            <ae-button title="Mention @" (buttonClick)="executeCommandFn('insertHtml')" iconClass="custom-svg-icon">
+                            </ae-button>
+                          </ae-toolbar-set>
+                        </ng-template>
+                      </angular-editor>
                 </div>
                 <div>
                     <div class=" text-title font-semibold mb-3">Product <span class=" text-error font-semibold">*</span></div>
